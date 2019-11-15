@@ -15,7 +15,7 @@ This repo allows for easy transfer of configuration files in the home directory 
 	dotgit checkout
   
 5. Make a new branch to backup this computer's original files, add and commit  
-   	dotgit checkout -t _computername_  
+   	dotgit checkout -b _computername_  
 	dotgit add _all files that would be overwritten_  
 	dotgit commit -m "saving original files"
   

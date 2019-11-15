@@ -9,7 +9,7 @@ alias "me_ROS=export ROS_MASTER_URI=http://localhost:11311 && export ROS_HOSTNAM
 alias "husky9_env=export ROS_MASTER_URI=http://husky9-am1.local:11311 && export ROS_HOSTNAME=gru && . /home/asd/rcta/install/rcta_setup.bash husky9"
 
 ## Managing dotfiles
-alias "dotfiles=/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias "dotgit=/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 ## Linux shortcuts
 alias "e=sudo emacs -nw"
