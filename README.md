@@ -11,17 +11,20 @@ This repo allows for easy transfer of configuration files in the home directory 
 3. Only track desired files  
    	dotgit config --local status.showUntrackedFiles no
   
-4. Find files that will be replaced  
+4. Find files that will be deleted and reset them
 	dotgit checkout
+	dotgit reset HEAD <each file listed by checkout>
+
+5. Now those files will be listed as "modified" and can be saved on a new branch  
+       dotgit add <each file to save, same ones as before>  
+       dotgit checkout -b _computername_  
+       dotgit commit -m "saving original files"  
   
-5. Make a new branch to backup this computer's original files, add and commit  
-   	dotgit checkout -b _computername_  
-	dotgit add _all files that would be overwritten_  
-	dotgit commit -m "saving original files"
-  
-8. Now load the files in this repo  
-   dotgit checkout master
-  
+8. Now load the files in this repo by deleting the commit just made for the original files
+       dotgit checkout master
+       dotgit reset --soft HEAD~1
+
+The final condition of this repo is that it now has the original machines files saved on a seperate branch and the files from this repo currently checked out.  
 
 
 Original tutorial here: https://medium.com/toutsbrasil/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b
