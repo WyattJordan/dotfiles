@@ -15,3 +15,6 @@
 
 ;; automatic file associations
 (add-to-list 'auto-mode-alist '("\\.launch$" . xml-mode))
+
+;; move one line at a time when scrolling past top/bottom
+(setq scroll-conservatively 10000)
