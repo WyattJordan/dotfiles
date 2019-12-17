@@ -20,6 +20,41 @@
 (setq scroll-conservatively 0)
 (setq scroll-step 5)
 
+;; make F7 jump to previous marks globally
+;; (defun xah-pop-local-mark-ring ()
+;;     "Move cursor to last mark position of current buffer.
+;; Call this repeatedly will cycle all positions in `mark-ring'.
+;; URL `http://ergoemacs.org/emacs/emacs_jump_to_previous_position.html'
+;; Version 2016-04-04"
+;;     (interactive)
+;;     (set-mark-command t))
+
+;; (global-set-key (kbd "<f7>") 'pop-global-mark)
+;; (global-set-key (kbd "<f8>") 'xah-pop-local-mark-ring)
+
+
+;; (defmacro my-unpop-to-mark-advice ()
+;;   "Enable reversing direction with un/pop-to-mark."
+;;   `(defadvice ,(key-binding (kbd "C-SPC")) (around my-unpop-to-mark activate)
+;;      "Unpop-to-mark with negative arg"
+;;      (let* ((arg (ad-get-arg 0))
+;; 	    (num (prefix-numeric-value arg)))
+;;        (cond
+;; 	;; Enabled repeated un-pops with C-SPC
+;; 	((eq last-command 'unpop-to-mark-command)
+;; 	 (if (and arg (> num 0) (<= num 4))
+;; 	     ad-do-it ;; C-u C-SPC reverses back to normal direction
+;; 	   ;; Otherwise continue to un-pop
+;; 	   (setq this-command 'unpop-to-mark-command)
+;; 	   (unpop-to-mark-command)))
+;; 	;; Negative argument un-pops: C-- C-SPC
+;; 	((< num 0)
+;; 	 (setq this-command 'unpop-to-mark-command)
+;; 	 (unpop-to-mark-command))
+;; 	(t
+;; 	 ad-do-it)))))
+;; (my-unpop-to-mark-advice)
+
 ;; jump between global marks with M-left/right
 (defun marker-is-point-p (marker)
   "test if marker is current point"
