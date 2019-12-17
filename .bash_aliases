@@ -17,5 +17,5 @@ alias "sdotgit=sudo /usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 ## Linux shortcuts
 alias "e=sudo emacs -nw"
 alias "gitcache_credentials=git config credential.helper 'cache --timeout=300'"
-
+alias "ssh-key-add=eval $(ssh-agent -s) && ssh-add $1"
 
