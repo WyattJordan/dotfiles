@@ -19,3 +19,13 @@ alias "e=sudo emacs -nw"
 alias "gitcache_credentials=git config credential.helper 'cache --timeout=300'"
 alias "ssh-key-add=eval $(ssh-agent -s) && ssh-add $1"
 
+## General notes
+# Adding another computer as a remote repo:
+# dotgit remote add am1_idvrn ssh://rcta@husky9-am1-idvrn/home/rcta/.dotfiles
+#
+#
+#
+#
+#
+#
+
