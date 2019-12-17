@@ -56,6 +56,7 @@
 ;; (my-unpop-to-mark-advice)
 
 ;; jump between global marks with M-left/right
+(setq global-mark-ring-max 32) ;; default is 16, bigger just in case
 (defun marker-is-point-p (marker)
   "test if marker is current point"
   (and (eq (marker-buffer marker) (current-buffer))
