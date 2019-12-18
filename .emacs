@@ -11,10 +11,13 @@
  ;; If there is more than one, they won't work right.
  )
 
-(load-theme 'tango-dark)
-
+(load-theme 'tango-dark
+)
 ;; automatic file associations
 (add-to-list 'auto-mode-alist '("\\.launch$" . xml-mode))
+
+(add-to-list 'load-path "/opt/ros/kinetic/share/emacs/site-lisp")
+(require 'rosemacs-config)
 
 ;; move 5 lines at a time when scrolling past top/bottom
 (setq scroll-conservatively 0)
