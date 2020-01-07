@@ -16,8 +16,12 @@ alias "sdotgit=sudo /usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 ## Linux shortcuts
 alias "e=sudo emacs -nw"
+alias "lsd=ls */ -d"
 alias "gitcache_credentials=git config credential.helper 'cache --timeout=300'"
 alias "ssh-key-add=eval $(ssh-agent -s) && ssh-add $1"
+
+alias "label_images_robot=python ~/rcta_ml_scripts/labeling_scripts/label_images.py --image_path ~/data/rcta/robot/$1/rgb --label robot_manual"
+alias "label_keypts_robot=python ~/rcta_ml_scripts/labeling_scripts/label_keypoints.py ~/data/rcta/robot/$1/rgb robot_manual 11"
 
 ## General notes
 # Adding another computer as a remote repo:

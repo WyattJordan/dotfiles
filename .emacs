@@ -13,6 +13,7 @@
 ;; move 5 lines at a time when scrolling past top/bottom
 (setq scroll-conservatively 0)
 (setq scroll-step 5)
+(set-face-attribute 'region nil :background "#633" :foreground "#ffffff")
 
 ;; jump between global marks with M-left/right
 (setq global-mark-ring-max 32) ;; default is 16, bigger just in case
