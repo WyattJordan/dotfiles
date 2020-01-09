@@ -6,9 +6,7 @@
 (load-theme 'tango-dark)
 ;; automatic file associations
 (add-to-list 'auto-mode-alist '("\\.launch$" . xml-mode))
-;; rosemacs
-(add-to-list 'load-path "/opt/ros/kinetic/share/emacs/site-lisp")
-(require 'rosemacs-config)
+
 
 ;; move 5 lines at a time when scrolling past top/bottom
 (setq scroll-conservatively 0)
@@ -50,3 +48,10 @@
 (global-set-key [M-left] (quote backward-global-mark))
 (global-set-key [M-right] (quote forward-global-mark))
 
+;; highlight indentations
+(add-to-list 'load-path "~/.emacs.d/")
+(require 'highlight-indent-guides)
+
+;; rosemacs
+(add-to-list 'load-path "/opt/ros/kinetic/share/emacs/site-lisp")
+(require 'rosemacs-config)
