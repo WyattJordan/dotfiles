@@ -1,6 +1,6 @@
 This repo allows for easy transfer of configuration files in the home directory (.bashrc, .bash_aliases, .emacs, .vimrc, etc). Simply 
 
-##Steps:
+## Steps:
 
 1. Setup repo  
 	git clone --bare https://gitlab.sitcore.net/arl/vtd/asd-ugv/dotfiles.git $HOME/.dotfiles
@@ -20,9 +20,12 @@ This repo allows for easy transfer of configuration files in the home directory 
        dotgit checkout -b _computername_  
        dotgit commit -m "saving original files"  
   
-8. Now load the files in this repo by deleting the commit just made for the original files
-       dotgit checkout master
+8. Now load the files in this repo by deleting the commit just made for the original files  
+       dotgit checkout master  
        dotgit reset --soft HEAD~1
+
+9. Load terminal colors
+       termcolors
 
 The final condition of this repo is that it now has the original machines files saved on a seperate branch and the files from this repo currently checked out.  
 
