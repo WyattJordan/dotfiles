@@ -9,7 +9,13 @@
 
 function dgx(){
 	 echo "ssh-ing into dgx$1"
-	 ssh -X asd@172.16.18.10$1
+	 if [ -z "$2" ]; then
+	    ssh -X asd@172.16.18.10$1
+	 else
+	    ssh -X $2@172.16.18.10$1
+	 fi
+
+
 }
 # list directories, either in present dir or specified by argument
 function lsd(){
