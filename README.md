@@ -13,13 +13,13 @@ This repo allows for easy transfer of configuration files in the home directory 
   
 4. The new .files will not import, instead git will show that changes have been made and the new files we want are deleted. To fix this, add the changes to the index, checkout a new branch which will keep the original files, commit, checkout the master.  
 	dotgit status  
-	dotgit add *
-	dotgit checkout -b "original files" # create new branch
-	dotgit commit -m "saving original files"
-	dotgit checkout master
-
-5. Load terminal colors
-       termcolors
+	dotgit add *  
+	dotgit checkout -b "original files" # create new branch  
+	dotgit commit -m "saving original files"  
+	dotgit checkout master  
+  
+5. Load terminal colors  
+       termcolors  
 
 The final condition of this repo is that it now has the original machines files saved on a seperate branch and the files from this repo currently checked out.  
 
