@@ -1,5 +1,6 @@
 [:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 background-color='rgb(48,10,46)'
+foreground-color='rgb(0,255,0)'
 background-transparency-percent=25
 use-theme-colors=false
 bold-color-same-as-fg=true
