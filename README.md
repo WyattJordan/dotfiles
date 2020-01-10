@@ -11,20 +11,14 @@ This repo allows for easy transfer of configuration files in the home directory 
 3. Only track desired files  
    	dotgit config --local status.showUntrackedFiles no
   
-4. Find files that will be deleted and reset them
-	dotgit checkout
-	dotgit reset HEAD <each file listed by checkout>
+4. The new .files will not import, instead git will show that changes have been made and the new files we want are deleted. To fix this, add the changes to the index, checkout a new branch which will keep the original files, commit, checkout the master.  
+	dotgit status  
+	dotgit add *
+	dotgit checkout -b "original files" # create new branch
+	dotgit commit -m "saving original files"
+	dotgit checkout master
 
-5. Now those files will be listed as "modified" and can be saved on a new branch  
-       dotgit add <each file to save, same ones as before>  
-       dotgit checkout -b _computername_  
-       dotgit commit -m "saving original files"  
-  
-8. Now load the files in this repo by deleting the commit just made for the original files  
-       dotgit checkout master  
-       dotgit reset --soft HEAD~1
-
-9. Load terminal colors
+5. Load terminal colors
        termcolors
 
 The final condition of this repo is that it now has the original machines files saved on a seperate branch and the files from this repo currently checked out.  
