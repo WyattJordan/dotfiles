@@ -24,7 +24,7 @@ This repo allows for easy transfer of configuration files in the home directory 
 6. Load tmux plugins
        dotgit submodule init
        dotgit submodule update
-       # then run prefix + I in tmux to install
+       # then run prefix + I in tmux to install (may need to chmod 777 ~./tmux/*
 
 The final condition of this repo is that it now has the original machines files saved on a seperate branch and the files from this repo currently checked out.  
 
