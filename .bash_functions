@@ -7,7 +7,10 @@
 #	  Logical statements:
 #	  	  Use the -gt -lt for > or <, note the spacing in the lsd example
 
-
+function dgx(){
+	 echo "ssh-ing into dgx$1"
+	 ssh -X asd@172.16.18.10$1
+}
 # list directories, either in present dir or specified by argument
 function lsd(){
 	if [ $# -gt 0 ]
