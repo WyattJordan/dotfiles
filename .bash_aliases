@@ -15,6 +15,7 @@ alias "cdl= cd - >&/dev/null"
 alias "gitcache_credentials=git config credential.helper 'cache --timeout=300'"
 alias "termcolors=dconf load /org/gnome/terminal/legacy/profiles:/ < .gnome-terminal-profiles.dconf"
 alias "ssh-key-add=eval $(ssh-agent -s) && ssh-add $1"
+alias 'lsh=ls \.* -d #list hidden files only'
 
 ## ROS
 alias "husky9_am1=ssh -X rcta@husky9-am1"
@@ -28,5 +29,6 @@ alias "husky9_env=export ROS_MASTER_URI=http://172.16.109.11:11311 && export ROS
 # Labeling images 
 alias "label_images_robot=python ~/rcta_ml_scripts/labeling_scripts/label_images.py --image_path ~/data/rcta/robot/$1/rgb --label robot_manual"
 alias "label_keypts_robot=python ~/rcta_ml_scripts/labeling_scripts/label_keypoints.py ~/data/rcta/robot/$1/rgb robot_manual 11"
+
 
 
