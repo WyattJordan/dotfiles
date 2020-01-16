@@ -18,9 +18,8 @@ function dgx(){
 	 else
 	    ssh -X $2@172.16.18.10$1
 	 fi
-
-
 }
+
 # list directories, either in present dir or specified by argument
 function lsd(){
 	if [ $# -gt 0 ]
