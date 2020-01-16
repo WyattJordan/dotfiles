@@ -49,9 +49,10 @@
 (global-set-key [M-right] (quote forward-global-mark))
 
 ;; highlight indentations
-(add-to-list 'load-path "~/.emacs.d/")
-(require 'highlight-indent-guides)
+(add-to-list 'load-path "~/.emacs.d/lisp_plugins")
+(load "highlight-indent-guides.el")
+;; or use (require 'highlight-indent-guides)
 
 ;; rosemacs
-(add-to-list 'load-path "/opt/ros/kinetic/share/emacs/site-lisp")
-(require 'rosemacs-config)
+;;(add-to-list 'load-path "/opt/ros/kinetic/share/emacs/site-lisp")
+;;(require 'rosemacs-config)
