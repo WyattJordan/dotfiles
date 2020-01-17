@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo "Installing emacs and tmux................................."
+sudo apt-get update && sudo apt-get install emacs tmux -y
+
+echo "Cleaning up home directory................................"
+nautilus -q # make the XDG folders track in ~/Standard
+sudo mkdir ~/Standard
+sudo mv ~/Desktop ~/Standard
+sudo mv ~/Documents ~/Standard
+sudo mv ~/Downloads ~/Standard
+sudo mv ~/Music ~/Standard
+sudo mv ~/Pictures ~/Standard
+sudo mv ~/Public ~/Standard
+sudo mv ~/Templates ~/Standard
+sudo mv ~/Videos ~/Standard
+
+# sudo rm .config
+# sudo echo "XDG_DESKTOP_DIR=\"$HOME/Standard/Desktop\"" >> ~/.config/user-dirs.dirs
+# sudo echo "XDG_DESKTOP_DIR=\"$HOME/Standard/Documents\"" >> ~/.config/user-dirs.dirs
+# sudo echo "XDG_DESKTOP_DIR=\"$HOME/Standard/Downloads\"" >> ~/.config/user-dirs.dirs
+# sudo echo "XDG_DESKTOP_DIR=\"$HOME/Standard/Music\"" >> ~/.config/user-dirs.dirs
+# sudo echo "XDG_DESKTOP_DIR=\"$HOME/Standard/Pictures\"" >> ~/.config/user-dirs.dirs
+# sudo echo "XDG_DESKTOP_DIR=\"$HOME/Standard/Public\"" >> ~/.config/user-dirs.dirs
+# sudo echo "XDG_DESKTOP_DIR=\"$HOME/Standard/Templates\"" >> ~/.config/user-dirs.dirs
+# sudo echo "XDG_DESKTOP_DIR=\"$HOME/Standard/Videos\"" >> ~/.config/user-dirs.dirs
+
+echo "Installing grip python pkg for markdown viewing........."
+sudo python -m pip install grip
