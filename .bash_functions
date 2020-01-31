@@ -32,11 +32,17 @@ function lsd(){
 
 # go up $1 directories
 function up(){
-
-	 levels=$1
-	 # more spaces aren't bad, but need at least 1
-	 while [      $levels -gt 0 ]; do
-	  cd ..
-	  levels=$(($levels - 1))
-	 done
+	 if [ $# -eq 0 ]
+	 then
+	   cd ..
+	 else	   
+	   levels=$1
+	   dir=""
+  	   # more spaces aren't bad, but need at least 1
+	   while [      $levels -gt 0 ]; do
+	    dir="$dir../"
+	    levels=$(($levels - 1))
+	   done
+	   cd ${dir}
+	 fi
 }
