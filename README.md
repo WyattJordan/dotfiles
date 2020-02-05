@@ -3,12 +3,12 @@ This repo allows for easy transfer of configuration files in the home directory 
 ## Steps:
 
 1. Setup repo  
-	git clone --bare https://gitlab.sitcore.net/arl/vtd/asd-ugv/dotfiles.git $HOME/.dotfiles
+	git clone --bare https://github.com/WyattJordan/dotfiles.git $HOME/.dotfiles
   
 2. Set alias for this repo, setup profile, don't track everything in $home  
 	alias "dotgit=/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"  
 	dotgit config --global user.name "Wyatt Jordan"  
-	dotgit config --global user.email "wyatt.s.jordan2.ctr@mail.mil"  
+	dotgit config --global user.email "wyattsjordan@gmail.com"  
    	dotgit config --local status.showUntrackedFiles no  
   
 3. The new .files will not import, instead git will show that changes have been made and the new files we want are deleted. To fix this, add the changes to the index, checkout a new branch which will keep the original files, commit, checkout the master.  
