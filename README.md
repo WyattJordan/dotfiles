@@ -19,9 +19,12 @@ This repo allows for easy transfer of configuration files in the home directory 
 	dotgit checkout master
 	dotgit reset --hard HEAD # this may be needed
   
-4. Load terminal colors  
-       termcolors
-
+4. Load terminal colors
+       Option1:
+             Use a pre-defined profile. Type termcolors TAB TAB to see the options stored in .bash_aliases
+       Option2:
+             Use solarized. Run dotgit submodule init && dotgit submodule update. Then run ./.custom/gnome-terminal-colors-solarized/.install and use dark_alternative  
+  
 5. Load tmux plugins  
        dotgit submodule init  
        dotgit submodule update  

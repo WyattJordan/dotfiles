@@ -13,7 +13,7 @@ alias "sdotgit=sudo /usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias "e=sudo emacs -nw"
 alias "cdl= cd - >&/dev/null"
 alias "gitcache_credentials=git config credential.helper 'cache --timeout=300'"
-alias "termcolors=dconf load /org/gnome/terminal/legacy/profiles:/ < .gnome-terminal-profiles.dconf"
+alias "termcolors_green_on_purple=dconf load /org/gnome/terminal/legacy/profiles:/ < .term_colors_green_on_purple"
 alias "ssh-key-add=eval $(ssh-agent -s) && ssh-add $1"
 alias 'lsh=ls \.* -d #list hidden files only'
 
