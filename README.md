@@ -29,6 +29,7 @@ This repo allows for easy transfer of configuration files in the home directory 
   
 The final condition of this repo is that it now has the original machines files saved on a seperate branch and the files from this repo currently checked out.  
 
+The emacs plugins are stored in this repo (no extra steps to use, just clone this repo and you're good). The tmux plugins must be installed on their own. The tmux plugin manager (TPM) is a submodule that must also be pulled and then run the installation of the plugins in tmux.  
 
 Original tutorial here: https://medium.com/toutsbrasil/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b
 
