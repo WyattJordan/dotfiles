@@ -82,7 +82,7 @@ There are two things you can do about this warning:
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 
 (global-set-key (kbd "M-p") 'ace-window)
-
+(setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
 ;; rosemacs
 ;;(add-to-list 'load-path "/opt/ros/kinetic/share/emacs/site-lisp")
 ;;(require 'rosemacs-config)
