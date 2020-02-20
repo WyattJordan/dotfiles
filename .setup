@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/bash -i
 echo "Setting up dgit repo ....................................."
-alias "dotgit=/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias "dgit=/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 dgit config --global user.name "Wyatt Jordan"
 dgit config --global user.email "wyatt.s.jordan2.ctr@mail.mil"
 dgit config --local status.showUntrackedFiles no
