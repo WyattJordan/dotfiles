@@ -6,8 +6,8 @@
 # ' >/dev/null' suppresses output and ' >&/dev/null' suppresses output and errors
 
 ## Managing dotfiles
-alias "dotgit=/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-alias "sdotgit=sudo /usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias "dgit=/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias "sdgit=sudo /usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 ## Linux shortcuts
 alias "e=sudo emacs -nw"
