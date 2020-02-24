@@ -2,37 +2,53 @@ This repo allows for easy transfer of configuration files in the home directory 
 
 ## Steps:
 
-1. Setup repo  
-	git clone --bare https://gitlab.sitcore.net/arl/vtd/asd-ugv/dotfiles.git $HOME/.dotfiles
-  
-2. Set alias for this repo, setup profile, don't track everything in $home  
-	alias "dotgit=/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"  
-	dotgit config --global user.name "Wyatt Jordan"  
-	dotgit config --global user.email "wyatt.s.jordan2.ctr@mail.mil"  
-   	dotgit config --local status.showUntrackedFiles no  
-  
-3. The new .files will not import, instead git will show that changes have been made and the new files we want are deleted. To fix this, add the changes to the index, checkout a new branch which will keep the original files, commit, checkout the master.  
-	dotgit status  
-	dotgit add *  
-	dotgit checkout -b "original files" # create new branch  
-	dotgit commit -m "saving original files"  
-	dotgit checkout master
-	dotgit reset --hard HEAD # this may be needed
-  
-4. Load terminal colors
-       Option1:
-             Use a pre-defined profile. Type termcolors TAB TAB to see the options stored in .bash_aliases
-       Option2:
-             Use solarized. Run dotgit submodule init && dotgit submodule update. Then run ./.custom/gnome-terminal-colors-solarized/.install and use dark_alternative  
-  
-5. Load tmux plugins  
-       dotgit submodule init  
-       dotgit submodule update  
-       # then run prefix + I in tmux to install (may need to chmod 777 ~./tmux/*  
-  
-The final condition of this repo is that it now has the original machines files saved on a seperate branch and the files from this repo currently checked out.  
+1. Basic setup (overwrites corresponding .files in home)
+```bash
+cd ~  
+git clone --bare https://gitlab.sitcore.net/arl/vtd/asd-ugv/dotfiles.git $HOME/.dotfiles  
+alias "dgit=/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
+# sets repo properties (username, email, cache etc and installs pkgs)  
+dgit checkout HEAD -- .setup  
+./.setup
+
+# If the old files should be preserved see the Save Old Files section (don't reset everything)
+dgit reset --hard HEAD  
+. .bashrc
+```
+  
+2. Load tmux plugins
+    ```bash
+       dgit submodule init  
+       dgit submodule update  
+       # then run prefix + I in tmux to install (may need to chmod 777 ~./tmux/*
+    ```
 The emacs plugins are stored in this repo (no extra steps to use, just clone this repo and you're good). The tmux plugins must be installed on their own. The tmux plugin manager (TPM) is a submodule that must also be pulled and then run the installation of the plugins in tmux.  
+
+3. Load terminal colors  
+       Option1:  
+             Use a pre-defined profile. Type termcolors TAB TAB to see the options stored in .bash_aliases  
+       Option2:  
+             Use solarized.  
+    ```bash  
+	     dgit submodule init && dgit submodule update  
+	     ./.custom/gnome-terminal-colors-solarized/.install # use dark_alternative  
+    ```  
+  
+
+
+
+### Save Old Files
+The new .files will not import , instead git will show that changes have been made and the new files we want are deleted. To fix this, add the changes to the index, checkout a new branch which will keep the original files, commit, checkout the master.
+    ```bash
+    
+	dgit status  
+	dgit add *  
+	dgit checkout -b "original files" # create new branch  
+	dgit commit -m "saving original files"  
+	dgit checkout master
+	dgit reset --hard HEAD  
+	. .bashrc
 
 Original tutorial here: https://medium.com/toutsbrasil/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b
 

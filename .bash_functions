@@ -11,10 +11,6 @@ function mntdgx(){
 	 sshfs asd@172.16.18.10$1:/ ~/dev/dgx/$1/
 }
 
-function mnthusky(){
-	 sshfs asd@172.16.109.1$1:/ ~/dev/husky/$1/
-}
-
 function dgx(){
 	 echo "ssh-ing into dgx$1"
 	 if [ -z "$2" ]; then
