@@ -12,7 +12,11 @@
 (setq scroll-conservatively 0)
 (setq scroll-step 5)
 (set-face-attribute 'region nil :background "#633" :foreground "#ffffff")
-;; done move 5 lines at a time when scrolling past top/bottom
+(desktop-save-mode 1)
+(setq desktop-restore-frames t)
+(setq desktop-restore-in-current-display t)
+(setq desktop-restore-forces-onscreen nil)
+
 
 
 ;; jump between global marks with M-left/right

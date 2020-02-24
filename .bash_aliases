@@ -6,8 +6,8 @@
 # ' >/dev/null' suppresses output and ' >&/dev/null' suppresses output and errors
 
 ## Managing dotfiles
-alias "dgit=/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-alias "sdgit=sudo /usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias "dotgit=/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias "sdotgit=sudo /usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 ## Linux shortcuts
 alias "e=sudo emacs -nw"
@@ -18,13 +18,13 @@ alias "ssh-key-add=eval $(ssh-agent -s) && ssh-add $1"
 alias 'lsh=ls \.* -d #list hidden files only'
 
 ## ROS
-alias "husky9_am1=ssh -X rcta@husky9-am1"
-alias "husky9_am3=ssh -X rcta@husky9-am3"
-alias "husky9_am1_idvrn=ssh -X rcta@husky9-am1-idvrn"
-alias "husky9_am3_idvrn=ssh -X rcta@husky9-am3-idvrn"
+alias "husky9_am1=ssh -X asd@husky9-am1"
+alias "husky9_am2=ssh -X asd@husky9-am2"
+alias "husky9_am1_idvrn=ssh -X asd@husky9-am1-idvrn"
+alias "husky9_am2_idvrn=ssh -X asd@husky9-am2-idvrn"
 export ROSCONSOLE_FORMAT='[${severity}] [${node}]: ${message}'
 alias "me_ROS=export ROS_MASTER_URI=http://localhost:11311 && export ROS_HOSTNAME=localhost"
-alias "husky9_env=export ROS_MASTER_URI=http://172.16.109.11:11311 && export ROS_HOSTNAME=gru && . /home/asd/dev/phoenix-r1/install/rcta_setup.bash husky9"
+alias "husky9_env=export ROS_MASTER_URI=http://172.16.109.12:11311 && export ROS_HOSTNAME=gru && . /home/asd/dev/phoenix-r1/install/rcta_setup.bash husky9"
 alias "husky9_env_idvrn=export ROS_MASTER_URI=http://172.16.18.60:11311 && export ROS_HOSTNAME=gru && . /home/asd/dev/phoenix-r1/install/rcta_setup.bash husky9"
 
 # Labeling images 
