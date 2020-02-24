@@ -2,3 +2,6 @@
 	path = .tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
 	ignore = dirty
+[submodule ".custom/gnome-terminal-colors-solarized"]
+	path = .custom/gnome-terminal-colors-solarized
+	url = https://github.com/aruhier/gnome-terminal-colors-solarized.git

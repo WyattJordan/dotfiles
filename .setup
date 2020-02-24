@@ -2,7 +2,10 @@
 
 echo "Installing emacs and tmux................................."
 sudo apt-get update && sudo apt-get install emacs tmux -y
-echo "Installing grip python pkg for markdown viewing........."
-sudo apt-get install python-grip
+echo "Installing dconf (gnome colors)..........................."
+sudo apt-get install dconf-cli -y
+echo "Installing python-grip (markdown viewing)................."
+sudo apt-get install python-grip -y
+
 
 
