@@ -5,7 +5,7 @@ This repo allows for easy transfer of configuration files in the home directory 
 1. Basic setup (overwrites corresponding .files in home)
 ```bash
 cd ~  
-git clone --bare https://gitlab.sitcore.net/arl/vtd/asd-ugv/dotfiles.git $HOME/.dotfiles  
+git clone --bare https://github.com/WyattJordan/dotfiles.git $HOME/.dotfiles  
 alias "dgit=/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 # sets repo properties (username, email, cache etc and installs pkgs)  
@@ -39,7 +39,7 @@ The emacs plugins are stored in this repo (no extra steps to use, just clone thi
 
 
 ### Save Old Files
-The new .files will not import , instead git will show that changes have been made and the new files we want are deleted. To fix this, add the changes to the index, checkout a new branch which will keep the original files, commit, checkout the master.
+The new .files will not import , instead git will show that changes have been made and the new files we want are deleted. To fix this, add the changes to the index, checkout a new branch which will keep the original files, commit, checkout the master.  
     ```bash
     
 	dgit status  
