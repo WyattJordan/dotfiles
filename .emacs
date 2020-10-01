@@ -81,8 +81,21 @@ There are two things you can do about this warning:
     ;; For important compatibility libraries like cl-lib
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 
+;; switching between windows
 (global-set-key (kbd "M-p") 'ace-window)
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
+
+;; reloading frames when loading a desktop file
+(setq desktop-restore-forces-onscreen nil)
+(add-hook 'desktop-after-read-hook
+ (lambda ()
+   (frameset-restore
+    desktop-saved-frameset
+    :reuse-frames (eq desktop-restore-reuses-frames t)
+    :cleanup-frames (not (eq desktop-restore-reuses-frames 'keep))
+    :force-display desktop-restore-in-current-display
+    :force-onscreen desktop-restore-forces-onscreen)))
+
 ;; rosemacs
 ;;(add-to-list 'load-path "/opt/ros/kinetic/share/emacs/site-lisp")
 ;;(require 'rosemacs-config)

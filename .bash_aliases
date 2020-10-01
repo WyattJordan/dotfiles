@@ -10,7 +10,8 @@ alias "dgit=/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias "sdgit=sudo /usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 ## Linux shortcuts
-alias "e=sudo emacs -nw"
+alias "e=emacs -nw"
+alias "se=sudo emacs -nw"
 alias "cdl= cd - >&/dev/null"
 alias "gitcache_credentials=git config credential.helper 'cache --timeout=300'"
 alias "termcolors_green_on_purple=dconf load /org/gnome/terminal/legacy/profiles:/ < .term_colors_green_on_purple"
