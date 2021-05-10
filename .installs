@@ -1,6 +1,0 @@
-!#/bin/bash
-
-sudo apt-get install emacs -y
-sudo apt-get install tmux -y
-sudo apt-get install grip -y # easiest way to read markdown files, just grip <file> and view in browser
-

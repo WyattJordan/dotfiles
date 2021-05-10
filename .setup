@@ -8,10 +8,13 @@ dgit config --global credential.helper 'cache --timeout=3000'
 
 echo "Installing emacs and tmux................................."
 sudo apt-get update && sudo apt-get install emacs tmux -y
-echo "Installing dconf (gnome colors)..........................."
-sudo apt-get install dconf-cli -y
-echo "Installing python-grip (markdown viewing)................."
-sudo apt-get install python-grip -y
+
+dgit submodule init
+dgit submodule update
+#echo "Installing dconf (gnome colors)..........................."
+#sudo apt-get install dconf-cli -y
+#echo "Installing python-grip (markdown viewing)................."
+#sudo apt-get install python-grip -y
 
 
 

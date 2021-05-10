@@ -33,3 +33,7 @@ function up(){
 	   cd ${dir}
 	 fi
 }
+
+function cpdownload(){
+	 cp ~/Downloads/$(ls -rt ~/Downloads/ | tail -1)
+}

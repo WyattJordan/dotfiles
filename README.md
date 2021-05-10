@@ -25,18 +25,6 @@ dgit reset --hard HEAD
     ```
 The emacs plugins are stored in this repo (no extra steps to use, just clone this repo and you're good). The tmux plugins must be installed on their own. The tmux plugin manager (TPM) is a submodule that must also be pulled and then run the installation of the plugins in tmux.  
 
-3. Load terminal colors  
-       Option1:  
-             Use a pre-defined profile. Type termcolors TAB TAB to see the options stored in .bash_aliases  
-       Option2:  
-             Use solarized.  
-    ```bash  
-	     dgit submodule init && dgit submodule update  
-	     ./.custom/gnome-terminal-colors-solarized/.install # use dark_alternative  
-    ```  
-  
-
-
 
 ### Save Old Files
 The new .files will not import , instead git will show that changes have been made and the new files we want are deleted. To fix this, add the changes to the index, checkout a new branch which will keep the original files, commit, checkout the master.  
