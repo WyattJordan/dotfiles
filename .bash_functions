@@ -35,5 +35,5 @@ function up(){
 }
 
 function cpdownload(){
-	 cp ~/Downloads/$(ls -rt ~/Downloads/ | tail -1)
+	 cp ~/Downloads/$(ls -rt ~/Downloads/ | tail -1) .
 }
